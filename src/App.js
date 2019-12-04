@@ -4,21 +4,16 @@ import React, { Component } from 'react';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/css/bootstrap.css';
-import { Route, Switch, Router } from 'react-router-dom';
+import { Route } from 'react-router-dom';
 //import { BrowserRouter as Router, Link } from "react-router-dom";
 import firebase from 'firebase/app';
-import { db, auth } from './services/firebase';
-import axios from 'axios';
-//import ImageUpload from './components/ImageUpload';
 
 // components
 import Landing from './Landing';
 import Dashboard from './Dashboard';
 import AboutSection from './AboutSection';
 import Features from './Features';
-//import TestFirebase from './TestFirebase'
-import Contact from './ContactUs';
-import Footer from './Footer';
+import Footer from './footer';
 
 class App extends Component {
   constructor(props) {

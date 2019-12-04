@@ -12,10 +12,10 @@ class DeleteModal extends Component {
                 <Modal
                     {...this.props}
                     backdrop="static"
-                    size="lg"
+                    size="md"
                     aria-labelledby="contained-modal-title-vcenter">
                     <Modal.Body>
-                        Are you sure you want to delete this Post
+                        Are you sure you want to delete this post?
                     </Modal.Body>
                     <Modal.Footer>
                         <Button variant="secondary" onClick={this.props.handleDeleteOnePost}>YES</Button>

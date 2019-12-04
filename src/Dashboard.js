@@ -5,13 +5,9 @@ import { Route, Switch, BrowserRouter as Router } from 'react-router-dom';
 
 // components
 import Header from './header';
-import Footer from './Footer';
+import Footer from './footer';
 import MidleSection from './MidleSection'
-import AboutUs from './AboutUs';
-import Contact from './ContactUs';
 
-
-import firebase from "firebase/app";
 import 'firebase/firestore'
 
 
@@ -27,6 +23,7 @@ class Dashboard extends Component {
         //console.log('the user name is: ' + this.props.user.email);
 
         this.refUpdate = React.createRef();
+        this.refMidle = React.createRef();
     }
 
     changeDefinite = event => {
@@ -39,14 +36,16 @@ class Dashboard extends Component {
     }
 
     searchDatabase = (event) => {
+        const currentMidle = this.refMidle.current;
+        currentMidle.searchDatabase();
         this.setState({
-            searchCheck: event.target.value
+            searchCheck: "yes"
         })
     }
 
     onUpdate = () => {
-        const currentUpdate = this.refUpdate.current;
-        currentUpdate.getDataToDisplay();
+        const currentMidle = this.refMidle.current;
+        currentMidle.getDataToDisplay();
     }
 
 
@@ -58,7 +57,7 @@ class Dashboard extends Component {
 
                     <Route path="/home" render={() => {
                         return (
-                            <MidleSection isDefiniteSelected={this.state.isDefiniteSelected} ref={this.refUpdate} searchCheck={this.state.searchCheck} userEmail={this.props.userEmail} />
+                            <MidleSection isDefiniteSelected={this.state.isDefiniteSelected} ref={this.refMidle} searchCheck={this.state.searchCheck} userEmail={this.props.userEmail} />
                             
                         );
                     }} />
@@ -78,24 +77,3 @@ class Dashboard extends Component {
 }
 
 export default Dashboard;
-
-
-/*<div>
-
-
-<Switch>
-    <Route path="/home" render={() => {
-        return (
-            <MidleSection isDefiniteSelected={this.state.isDefiniteSelected} searchCheck={this.state.searchCheck} />
-        );
-    }} />
-
-
-
-    <Route exact path="/contact" component={ContactUs} />
-    <Route path="/about" component={AboutUs} />
-
-</Switch>
-
-
-</div>*/

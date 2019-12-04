@@ -17,3 +17,18 @@
 .middleSection {
     background-color: #f4f4f4;
 }
+
+.card-title {
+    max-width: 150px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-bottom: 0.75rem;
+}
+
+.card-text {
+    max-width: 150px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}

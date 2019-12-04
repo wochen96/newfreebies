@@ -12,7 +12,16 @@
 }
 
 .modal-header {
-    background-color: #ff7315;
+    background-color: #343a40 !important;
+}
+
+.modal-header .close {
+    color: white;
+}
+
+.modal-title {
+    color: white;
+    font-weight: 300;
 }
 
 .modal-body {

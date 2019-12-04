@@ -3,8 +3,6 @@ import React, { Component } from 'react';
 //import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/css/bootstrap.css';
-import { Button, Navbar, Nav, Form, FormControl } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
 
 class Footer extends Component {
     render() {

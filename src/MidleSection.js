@@ -23,7 +23,7 @@ class MidleSection extends Component {
         db.collection('posts').where('isDefinite', '==', this.props.isDefiniteSelected).orderBy('startDate', 'desc')
             .get()
             .then(snapshot => {
-                
+
                 snapshot.forEach(doc => {
                     const data = doc.data();
                     console.log('data: ' + data.toString());
@@ -40,25 +40,26 @@ class MidleSection extends Component {
             .catch(error => console.log(error));
     }
 
-    searchDatabase = props => {
+    searchDatabase = event => {
         var searchTerm = document.getElementById("search").value.toLowerCase();
 
         db.collection("posts")
             .get()
             .then(snapshot => {
                 const posts = [];
-                snapshot.forEach(doc =>  {
+                snapshot.forEach(doc => {
 
                     const data = doc.data();
 
-                    if (data.title.toLowerCase().includes(searchTerm)) {
+                    if (data.title.toLowerCase().includes(searchTerm) || data.tag.toLowerCase().includes(searchTerm) || 
+                    data.location.toLowerCase().includes(searchTerm) || data.description.toLowerCase().includes(searchTerm)) {
                         //console.log(doc.data().title);
 
                         posts.push({
                             key: doc.id,
                             data: data
                         })
-                        //console.log(posts);
+                        console.log("searchDatabase counts")
                     }
                 });
                 this.setState({ posts: posts });
@@ -69,7 +70,7 @@ class MidleSection extends Component {
     render() {
 
         if (this.props.searchCheck == 'yes') {
-            this.searchDatabase(this.props);
+            //this.searchDatabase(this.props);
         } else if (this.state.posts == null) {
             this.getDataToDisplay(this.props);
         } else {

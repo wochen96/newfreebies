@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
-import { Modal, Button, Row, Col, Form } from 'react-bootstrap';
 import EditModal from './EditModal';
 import PostModal from './PostModal';
 import DeleteModal from './DeleteModal'
 import './modal.css';
-import { db, auth, storage } from './services/firebase';
+import { db, storage } from './services/firebase';
 
 
 class PostView extends Component {
@@ -13,7 +12,9 @@ class PostView extends Component {
         this.state = {
             showPostModal: false,
             showEditModal: false,
-            showDeleteModal: false
+            showDeleteModal: false,
+            upVote: parseInt(this.props.onePost.data.upvotes),
+            downVote: parseInt(this.props.onePost.data.downvotes),
         }
 
         this.openEditModal = this.openEditModal.bind(this);
@@ -91,6 +92,46 @@ class PostView extends Component {
         });
     }
 
+    upOneVote = e => {
+        this.setState({
+            upVote: this.state.upVote + 1
+        }, () => {
+            db.collection('posts').doc(this.props.onePost.key)
+                .update({
+                    upvotes: this.state.upVote.toString()
+                })
+                .then(function () {
+                    console.log("Document successfully updated!");
+                    //window.location.reload();
+                    //this.props.getDataToDisplay();
+                })
+                .catch(function (error) {
+                    // The document probably doesn't exist.
+                    console.error("Error updating document: ", error);
+                });
+        });
+    }
+
+    downOneVote = e => {
+        this.setState({
+            downVote: this.state.downVote + 1
+        }, () => {
+            db.collection('posts').doc(this.props.onePost.key)
+                .update({
+                    downvotes: this.state.downVote.toString()
+                })
+                .then(function () {
+                    console.log("Document successfully updated!");
+                    //window.location.reload();
+                    //this.props.getDataToDisplay();
+                })
+                .catch(function (error) {
+                    // The document probably doesn't exist.
+                    console.error("Error updating document: ", error);
+                });
+        });
+    }
+
     render() {
         return (
             <div>
@@ -101,7 +142,11 @@ class PostView extends Component {
                         openEditModal={this.openEditModal}
                         openDeleteModal={this.openDeleteModal}
                         onePost={this.props.onePost}
-                        userEmail={this.props.userEmail} />
+                        userEmail={this.props.userEmail}
+                        upVote={this.state.upVote}
+                        downVote={this.state.downVote}
+                        upOneVote={this.upOneVote}
+                        downOneVote={this.downOneVote}/>
                 )}
                 {this.state.showEditModal && (
                     <EditModal
