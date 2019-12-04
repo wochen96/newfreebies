@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "/freebies/newfreebies/src/App.js/static/css/main.6404c0e7.chunk.css",
-    "main.js": "/freebies/newfreebies/src/App.js/static/js/main.808ae8c9.chunk.js",
-    "main.js.map": "/freebies/newfreebies/src/App.js/static/js/main.808ae8c9.chunk.js.map",
-    "runtime-main.js": "/freebies/newfreebies/src/App.js/static/js/runtime-main.b3de4136.js",
-    "runtime-main.js.map": "/freebies/newfreebies/src/App.js/static/js/runtime-main.b3de4136.js.map",
-    "static/css/2.d70df38f.chunk.css": "/freebies/newfreebies/src/App.js/static/css/2.d70df38f.chunk.css",
-    "static/js/2.8cc402e2.chunk.js": "/freebies/newfreebies/src/App.js/static/js/2.8cc402e2.chunk.js",
-    "static/js/2.8cc402e2.chunk.js.map": "/freebies/newfreebies/src/App.js/static/js/2.8cc402e2.chunk.js.map",
-    "index.html": "/freebies/newfreebies/src/App.js/index.html",
-    "precache-manifest.f776c4446acea123bca26b302d4e2c8f.js": "/freebies/newfreebies/src/App.js/precache-manifest.f776c4446acea123bca26b302d4e2c8f.js",
-    "service-worker.js": "/freebies/newfreebies/src/App.js/service-worker.js",
-    "static/css/2.d70df38f.chunk.css.map": "/freebies/newfreebies/src/App.js/static/css/2.d70df38f.chunk.css.map",
-    "static/css/main.6404c0e7.chunk.css.map": "/freebies/newfreebies/src/App.js/static/css/main.6404c0e7.chunk.css.map",
-    "static/media/App.css": "/freebies/newfreebies/src/App.js/static/media/library.b9c1c063.jpg"
+    "main.css": "/freebies/newfreebies/build/static/css/main.265303ed.chunk.css",
+    "main.js": "/freebies/newfreebies/build/static/js/main.233fc69a.chunk.js",
+    "main.js.map": "/freebies/newfreebies/build/static/js/main.233fc69a.chunk.js.map",
+    "runtime-main.js": "/freebies/newfreebies/build/static/js/runtime-main.d6bdbd70.js",
+    "runtime-main.js.map": "/freebies/newfreebies/build/static/js/runtime-main.d6bdbd70.js.map",
+    "static/css/2.d70df38f.chunk.css": "/freebies/newfreebies/build/static/css/2.d70df38f.chunk.css",
+    "static/js/2.19a504b2.chunk.js": "/freebies/newfreebies/build/static/js/2.19a504b2.chunk.js",
+    "static/js/2.19a504b2.chunk.js.map": "/freebies/newfreebies/build/static/js/2.19a504b2.chunk.js.map",
+    "index.html": "/freebies/newfreebies/build/index.html",
+    "precache-manifest.d62a4674515a353cd38b5483d7962f21.js": "/freebies/newfreebies/build/precache-manifest.d62a4674515a353cd38b5483d7962f21.js",
+    "service-worker.js": "/freebies/newfreebies/build/service-worker.js",
+    "static/css/2.d70df38f.chunk.css.map": "/freebies/newfreebies/build/static/css/2.d70df38f.chunk.css.map",
+    "static/css/main.265303ed.chunk.css.map": "/freebies/newfreebies/build/static/css/main.265303ed.chunk.css.map",
+    "static/media/App.css": "/freebies/newfreebies/build/static/media/library.b9c1c063.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.b3de4136.js",
+    "static/js/runtime-main.d6bdbd70.js",
     "static/css/2.d70df38f.chunk.css",
-    "static/js/2.8cc402e2.chunk.js",
-    "static/css/main.6404c0e7.chunk.css",
-    "static/js/main.808ae8c9.chunk.js"
+    "static/js/2.19a504b2.chunk.js",
+    "static/css/main.265303ed.chunk.css",
+    "static/js/main.233fc69a.chunk.js"
   ]
 }
