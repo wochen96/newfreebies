@@ -1,0 +1,19 @@
+#cardImg {
+    height:200px;
+    width:200px;
+}
+
+
+.cardContainer {
+    padding:2%;
+    display: flex;
+    align-items: baseline;
+    flex-wrap: wrap;
+}
+.detail {
+    margin-top: 10%;
+}
+
+.middleSection {
+    background-color: #f4f4f4;
+}

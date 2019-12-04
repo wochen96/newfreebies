@@ -1,0 +1,67 @@
+return (
+    <div>
+        <Modal
+            {...this.props}
+            backdrop="static"
+            size="lg"
+            aria-labelledby="contained-modal-title-vcenter"
+            centered>
+            <Modal.Header closeButton>
+                <Modal.Title>Edit Post</Modal.Title>
+            </Modal.Header>
+            <Modal.Body>
+                <div className="modal-body">
+                    <p><span className="modal-label">Title: </span><input type="text" id="inputEditTitle"></input></p>
+                    <p><span className="modal-label">Location: </span><input type="text" id="inputEditLocation"></input></p>
+                    <div>
+                        {/* <input type="radio" value="definite" id="inputDefinite" checked={this.state.selectedOption === 'definite'} onChange={this.handleOptionChange} /> Definite
+                                <input type="radio" value="indefinite" id="inputIndefinite" checked={this.state.selectedOption === 'indefinite'} onChange={this.handleOptionChange} /> Indefinite */}
+                        {this.state.isDefinite === "definite" ?
+                            <div>
+                                {/* <p><span className="modal-label">Date: </span><input type="text" id="inputDate" /></p> */}
+                                <p><span className="modal-label">Event time: </span></p>
+
+                                <p>
+                                    <span className="modal-label">Start Time: </span>
+
+                                    <DatePicker
+                                        selected={this.state.startDate}
+                                        onChange={date => this.setState({ startDate: date })}
+                                        showTimeSelect
+                                        timeFormat="HH:mm"
+                                        timeIntervals={15}
+                                        timeCaption="time"
+                                        dateFormat="MMMM d, yyyy h:mm aa"
+                                        id="inputEditStartDate"
+                                    />
+                                </p>
+
+                                <p>
+                                    <span className="modal-label">End Time: </span>
+                                    <DatePicker
+                                        selected={this.state.endDate}
+                                        onChange={date => this.setState({ endDate: date })}
+                                        showTimeSelect
+                                        timeFormat="HH:mm"
+                                        timeIntervals={15}
+                                        timeCaption="time"
+                                        dateFormat="MMMM d, yyyy h:mm aa"
+                                        id="inputEditEndDate"
+                                    />
+                                </p>
+                            </div> : null
+                        }
+                    </div>
+
+                    <p><span className="modal-label">Description: </span><input type="text" id="inputEditDescription"></input></p>
+                    <p><span className="modal-label">Tag: </span><input type="text" id="inputEditTag"></input></p>
+                </div>
+            </Modal.Body>
+
+            <Modal.Footer>
+                <Button variant="secondary" onClick={this.props.onHide}>CANCEL</Button>
+                <Button variant="primary" onClick={this.editOnePost}>SUBMIT</Button>
+            </Modal.Footer>
+        </Modal>
+    </div >
+);

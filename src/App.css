@@ -1,0 +1,99 @@
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+  overflow-x: hidden; 
+}
+
+section {
+  min-height: 100vh;
+}
+
+/**!-----------------------
+    [ Landing Page ]
+-------------------------**/
+.landing-splash {
+  background-image: url("img/landing-splash.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.library {
+  background-image: url("img/library.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.feature-img {
+  width: 90px;
+  height: 90px;
+  margin: auto;
+  display: block;
+}
+
+.features {
+  background-color: #424a60;
+}
+
+/**!-----------------------
+    [ Dashboard ]
+-------------------------**/
+
+body {
+  font-family: "Open Sans", sans-serif;
+  font-size: 18px;
+  color: black;
+  font-weight: 400;
+  font-style: normal;
+}
+html, body, #app, #app>div {
+  height: 100%
+}
+header {
+  display: block;
+  width: 100%;
+}
+/* footer {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+} */
+.btn-primary{
+ border-color:#337ab7;
+}
+@minin translateY($e) {
+  -webkit-transform: translateY($e);
+  -moz-transform: translateY($e);
+  transform: translateY($e);
+}
+@minin transition($e) {
+  -webkit-transition:$e;
+  -moz-transition:$e;
+  transition:$e;
+}
+.card-columns {
+  display: flex;
+}
+.card {
+  margin-right: 2vw;
+}
+.card-body {
+  text-align: center;
+}
+.card-img-top {
+  align-content:center;
+}
+
+/**!-----------------------
+    [ Dashboard ]
+-------------------------**/
+
+.card:hover{ 
+  box-shadow: 5px 5px 5px grey;
+}
