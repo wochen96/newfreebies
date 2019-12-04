@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/freebies/newfreebies/static/css/main.bf994b3f.chunk.css",
+    "main.js": "/freebies/newfreebies/static/js/main.29068db9.chunk.js",
+    "main.js.map": "/freebies/newfreebies/static/js/main.29068db9.chunk.js.map",
+    "runtime-main.js": "/freebies/newfreebies/static/js/runtime-main.a96b362b.js",
+    "runtime-main.js.map": "/freebies/newfreebies/static/js/runtime-main.a96b362b.js.map",
+    "static/css/2.d70df38f.chunk.css": "/freebies/newfreebies/static/css/2.d70df38f.chunk.css",
+    "static/js/2.c3475d86.chunk.js": "/freebies/newfreebies/static/js/2.c3475d86.chunk.js",
+    "static/js/2.c3475d86.chunk.js.map": "/freebies/newfreebies/static/js/2.c3475d86.chunk.js.map",
+    "index.html": "/freebies/newfreebies/index.html",
+    "precache-manifest.1a23a9f9bc986018268ba3e8bdd4ae88.js": "/freebies/newfreebies/precache-manifest.1a23a9f9bc986018268ba3e8bdd4ae88.js",
+    "service-worker.js": "/freebies/newfreebies/service-worker.js",
+    "static/css/2.d70df38f.chunk.css.map": "/freebies/newfreebies/static/css/2.d70df38f.chunk.css.map",
+    "static/css/main.bf994b3f.chunk.css.map": "/freebies/newfreebies/static/css/main.bf994b3f.chunk.css.map",
+    "static/media/App.css": "/freebies/newfreebies/static/media/library.b9c1c063.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.a96b362b.js",
+    "static/css/2.d70df38f.chunk.css",
+    "static/js/2.c3475d86.chunk.js",
+    "static/css/main.bf994b3f.chunk.css",
+    "static/js/main.29068db9.chunk.js"
+  ]
+}
